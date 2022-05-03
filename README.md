@@ -1,11 +1,11 @@
-# Ukraine Alarm
+# 🇺🇦 Ukraine Alarm 🚨
 
 ## UK
-Імплементує [https://api.ukrainealarm.com/swagger/index.html](api.ukrainealarm.com), який повертає інформацію про повітряні тривоги в Україні.
+Імплементує [api.ukrainealarm.com](https://api.ukrainealarm.com/swagger/index.html), який повертає інформацію про повітряні тривоги в Україні.
 
-Потребує API-ключ. Подавайте запит на отримання через форму на https://api.ukrainealarm.com/.
+Потребує API-ключ. Подавайте запит на отримання через форму на [api.ukrainealarm.com](https://api.ukrainealarm.com/).
 
 ## EN
-Implements [https://api.ukrainealarm.com/swagger/index.html](api.ukrainealarm.com) API that returns info about Ukraine air raid alarms.
+Implements [api.ukrainealarm.com](https://api.ukrainealarm.com/swagger/index.html) API that returns info about Ukraine air raid alarms.
 
-Request API key via form on https://api.ukrainealarm.com/.
+Request API key via form on [api.ukrainealarm.com](https://api.ukrainealarm.com/).
