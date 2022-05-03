@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "aiohttp"
-    ]
+    ],
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "files.trimTrailingWhitespace": true
 }

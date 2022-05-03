@@ -15,14 +15,14 @@ class Client:
     async def __request(self, method: str, path: str) -> ClientResponse:
         """Make a request."""
 
-        headers = { 
+        headers = {
             "accept": "application/json",
-            "authorization": self.access_token 
+            "authorization": self.access_token
         }
 
         r = await self.session.request(
-            method, 
-            f"{Client.BASE_PATH}/{path}", 
+            method,
+            f"{Client.BASE_PATH}/{path}",
             headers=headers,
             timeout=Client.REQUEST_TIMEOUT
         )
@@ -32,11 +32,11 @@ class Client:
     async def get_alerts(self, region_id: str = None) -> ClientResponse:
         """Get alerts."""
         return await self.__request("GET", "alerts" if region_id is None else f"alerts/{region_id}")
-    
+
     async def get_last_alert_index(self) -> ClientResponse:
         """Get last alert index."""
         return await self.__request("GET", "alerts/status")
-    
+
     async def get_regions(self) -> ClientResponse:
         """Get regions."""
         return await self.__request("GET", "regions")
