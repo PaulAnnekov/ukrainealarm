@@ -9,7 +9,7 @@ class Client:
 
     def __init__(self, session: ClientSession, access_token: str):
         """Initialize the client."""
-        self.websession = session
+        self.session = session
         self.access_token = access_token
 
     async def __request(self, method: str, path: str) -> ClientResponse:
@@ -27,11 +27,11 @@ class Client:
             timeout=Client.REQUEST_TIMEOUT
         )
         r.raise_for_status()
-        return r.json()
+        return await r.json()
 
-    async def get_alerts(self, region_id: str) -> ClientResponse:
+    async def get_alerts(self, region_id: str = None) -> ClientResponse:
         """Get alerts."""
-        r = await self.__request("GET", "alerts" if region_id is None else f"alerts/{region_id}")
+        return await self.__request("GET", "alerts" if region_id is None else f"alerts/{region_id}")
     
     async def get_last_alert_index(self) -> ClientResponse:
         """Get last alert index."""
